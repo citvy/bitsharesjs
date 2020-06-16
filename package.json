@@ -1,17 +1,12 @@
 {
-    "name": "bitsharesjs",
-    "version": "3.3.0",
+    "name": "citvyjs",
+    "version": "3.3.1",
     "description": "Pure JavaScript BitShares library for node.js and browsers.",
     "browser": {
         "ws": false,
         "crypto": false
     },
     "scripts": {
-        "test": "cross-env BABEL_ENV=test mocha --require @babel/register --recursive",
-        "test:chain": "cross-env BABEL_ENV=test mocha --require @babel/register ./test/chain --recursive --watch",
-        "test:trxbuilder": "cross-env BABEL_ENV=test mocha --require @babel/register ./test/chain/TransactionBuilder.js --watch",
-        "test:ecc": "cross-env BABEL_ENV=test mocha --require @babel/register ./test/ecc --recursive --watch",
-        "test:serializer": "cross-env BABEL_ENV=test mocha --require @babel/register ./test/serializer --recursive",
         "test:watch": "npm test -- --watch",
         "clean": "rimraf dist build es",
         "prebuild": "npm run clean",
@@ -59,7 +54,7 @@
     "jsnext:main": "./es/index.js",
     "dependencies": {
         "bigi": "1.4.2",
-        "bitsharesjs-ws": "^3.1.1",
+        "citvyjs-ws": "^3.1.2",
         "bs58": "4.0.1",
         "bytebuffer": "5.0.1",
         "create-hash": "1.2.0",

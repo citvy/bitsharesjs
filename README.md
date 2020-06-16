@@ -1,11 +1,8 @@
-# BitsharesJS (bitsharesjs)
+# CITVYJS (citvyjs)
 
 Pure JavaScript Bitshares library for node.js and browsers. Can be used to construct, sign and broadcast transactions in JavaScript, and to easily obtain data from the blockchain via public apis.
 
 Most of this code was written by [jcalfee](https://github.com/jcalfee), my work was mostly just repackaging to a discrete npm package.
-
-[![npm version](https://img.shields.io/npm/v/bitsharesjs.svg?style=flat-square)](https://www.npmjs.com/package/bitsharesjs)
-[![npm downloads](https://img.shields.io/npm/dm/bitsharesjs.svg?style=flat-square)](https://www.npmjs.com/package/bitsharesjs)
 
 Security issues might be eligible for a bounty through the [HackTheDex](https://hackthedex.io) program.
 
@@ -14,7 +11,7 @@ Security issues might be eligible for a bounty through the [HackTheDex](https://
 This library can be obtained through npm:
 
 ```
-npm install bitsharesjs
+npm install citvyjs
 ```
 
 ## Usage
@@ -60,8 +57,8 @@ The Chain library contains a complete state container called the ChainStore. The
 The ChainStore has several useful methods to retrieve, among other things, objects, assets and accounts using either object ids or asset/account names. These methods are synchronous and will return `undefined` to indicate fetching in progress, and `null` to indicate that the object does not exist.
 
 ```
-import {Apis} from "bitsharesjs-ws";
-var {ChainStore} = require("bitsharesjs");
+import {Apis} from "citvyjs-ws";
+var {ChainStore} = require("citvyjs");
 
 Apis.instance("wss://eu.nodes.bitshares.ws", true).init_promise.then((res) => {
     console.log("connected to:", res[0].network);
@@ -86,7 +83,7 @@ The ECC library contains all the crypto functions for private and public keys as
 As a quick example, here's how to generate a new private key from a seed (a brainkey for example):
 
 ```
-var {PrivateKey, key} = require("bitsharesjs");
+var {PrivateKey, key} = require("citvyjs");
 
 let seed = "THIS IS A TERRIBLE BRAINKEY SEED WORD SEQUENCE";
 let pkey = PrivateKey.fromSeed( key.normalize_brainKey(seed) );
@@ -109,10 +106,10 @@ open out/esdoc/index.html
 
 ## Binaries / Browserified bundles
 
-Please have a [look here](https://github.com/bitshares/bitsharesjs/releases) to find your desired release.
+Please have a [look here](https://github.com/bitshares/citvyjs/releases) to find your desired release.
 If you want to build the binaries yourself you can clone this repository and run `npm install`. It will
 create
 
--   Browserified version `build/bitsharesjs.js`
--   Browserified and minified (babel) version `build/bitsharesjs.min.js`
--   CommonJS version using wepback `build/bitsharesjs.cjs`
+-   Browserified version `build/citvyjs.js`
+-   Browserified and minified (babel) version `build/citvyjs.min.js`
+-   CommonJS version using wepback `build/citvyjs.cjs`
